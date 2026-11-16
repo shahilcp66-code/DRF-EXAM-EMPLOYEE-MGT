@@ -1,0 +1,112 @@
+### API CALL FOR ADD EMPLOYEE
+post http://127.0.0.1:8000/emp
+Content-Type: application/json
+
+{
+    "name":"raju",
+    "email":"raju@gmail.com",
+    "department":"developer",
+    "designation":" junior developer"
+}
+
+
+### API CALL FOR LIST EMPLOYEE
+get http://127.0.0.1:8000/emp
+
+
+### API CALL FOR UPDATE EMPLOYEE
+patch http://127.0.0.1:8000/emp/details/2
+Content-Type: application/json
+
+{
+    "department":"frontend"
+
+}
+
+### API CALL FOR RETRIEVE EMPLOYEE
+get http://127.0.0.1:8000/emp/details/1
+
+### API CALL FOR DELETE EMPLOYEE
+delete http://127.0.0.1:8000/emp/details/2
+
+
+### API CALL FOR  TASK CREATE
+post http://127.0.0.1:8000/task
+Content-Type: application/json
+Authorization: Token {{shahil}}
+
+{
+    "title":"gym website",
+    "description":"good",
+    "assigned_to":4,
+    "priority":"High",
+    "due_date":"2026-11-30"
+}
+
+
+### API CALL FOR LIST TASK
+get http://127.0.0.1:8000/task
+Authorization: Token {{shahil}}
+
+
+### API CALL FOR RETRIVE TASK
+get  http://127.0.0.1:8000/task/details/2
+Authorization: Token {{shahil}}
+
+
+### API CALL FOR UPDATE TASK
+patch http://127.0.0.1:8000/task/details/6
+Content-Type: application/json
+Authorization: Token {{shahil}}
+
+{
+    "status":"Completed",
+    "due_date":"2026-11-26"
+}
+
+### API CALL FOR  DELETE TASK
+delete http://127.0.0.1:8000/task/details/2
+Authorization: Token {{shahil}}
+
+
+
+
+### API CALL FOR TOKEN CREATION
+post http://127.0.0.1:8000/token
+Content-Type: application/json
+
+{
+    "username":"shahil",
+    "password":"shahil"
+}
+
+###
+@shahil=88ff3a4fc482fa3633c1cf99f3686c3333f145f0
+
+
+### API CALL FOR SEARCH STATUS 
+get http://127.0.0.1:8000/task?status=Completed
+Authorization: Token {{shahil}}
+
+
+### API CALL FOR STATUS PENDING
+get http://127.0.0.1:8000/task?status=Pending
+Authorization: Token {{shahil}}
+
+
+
+### API CALL FOR PARTICULAR EMPLOYEE PENDING
+get http://127.0.0.1:8000/pending/3
+Authorization: Token {{shahil}}
+
+
+
+
+
+
+
+
+
+
+
+
